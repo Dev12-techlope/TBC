@@ -1,0 +1,134 @@
+<!--
+  ============================================================================
+  MODÈLE D'ARTICLE — TBC Blog
+  ============================================================================
+  Pour publier un nouvel article :
+
+  1. Dupliquez ce fichier et renommez la copie, par exemple :
+     article-mon-nouveau-sujet.html
+     (gardez le préfixe "article-" et un nom court sans espace ni accent)
+
+  2. Dans le <head> ci-dessous, remplacez le texte du <title>.
+
+  3. Dans le <header class="page-header">, remplacez :
+     - la date dans <div class="eyebrow">
+     - le titre dans <h1>
+
+  4. Dans <div class="article-body">, remplacez le texte par le contenu réel
+     de l'article. Gardez la structure : un <p> d'intro, puis des <h2> pour
+     chaque partie, chacun suivi d'un ou plusieurs <p>.
+
+  5. En bas de page, mettez à jour les deux liens de <div class="article-nav">
+     pour qu'ils pointent vers vos articles précédent/suivant (ou vers
+     blog.html si c'est le premier ou le dernier).
+
+  6. Enfin, ouvrez blog.html et ajoutez une nouvelle carte dans la grille
+     (copiez un bloc <div class="col-md-6 col-lg-4">...</div> existant),
+     en changeant l'image, la date, le titre, le résumé, et surtout le lien
+     href qui doit pointer vers le fichier que vous venez de créer.
+
+  Ce bloc de commentaire n'apparaît jamais sur le site : un commentaire HTML
+  n'est visible que dans le code source, jamais dans le navigateur.
+  ============================================================================
+-->
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Titre de l'article – Blog TBC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-tbc sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://it-tbc.com/wp-content/uploads/2025/02/cropped-log_tbc-1-270x270.jpg" alt="TBC">
+        <span class="brand-tag">IT · CONSEIL<br>DÉVELOPPEMENT</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#nos-services">Nos services</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#expertise">Expertise</a></li>
+          <li class="nav-item"><a class="nav-link" href="formation.html">Formation</a></li>
+          <li class="nav-item"><a class="nav-link" href="recrutement.html">Recrutement</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+        <!-- Remplacez la date ci-dessous -->
+        <div class="eyebrow">Jour mois année</div>
+        <!-- Remplacez le titre ci-dessous -->
+        <h1>Titre de l'article</h1>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block">
+          <img class="page-header-art" src="img/header-article.svg" alt="" width="480" height="300" aria-hidden="true">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="article-body">
+        <!-- Paragraphe d'introduction -->
+        <p>
+          Écrivez ici votre paragraphe d'introduction : le sujet, l'enjeu, ce que le lecteur va apprendre.
+        </p>
+
+        <!-- Première partie -->
+        <h2>Titre de la première partie</h2>
+        <p>
+          Développez ici votre premier point.
+        </p>
+
+        <!-- Deuxième partie -->
+        <h2>Titre de la deuxième partie</h2>
+        <p>
+          Développez ici votre deuxième point.
+        </p>
+
+        <!-- Ajoutez d'autres <h2>/<p> si nécessaire -->
+
+        <div class="article-nav">
+          <a href="blog.html" class="btn-ghost">← Article précédent</a>
+          <a href="blog.html" class="btn-ghost">Article suivant →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-tbc">
+    <div class="container">
+      <div class="footer-bottom d-flex justify-content-between flex-wrap gap-2">
+        <span>© 2026 TBC</span>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="read-progress" aria-hidden="true"></div>
+  <button class="to-top" type="button" aria-label="Revenir en haut de la page">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TBC – Expertise et Conseil en technologie de l'Information</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-tbc sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://it-tbc.com/wp-content/uploads/2025/02/cropped-log_tbc-1-270x270.jpg" alt="TBC">
+        <span class="brand-tag">IT · CONSEIL<br>DÉVELOPPEMENT</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#nos-services">Nos services</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#expertise">Expertise</a></li>
+          <li class="nav-item"><a class="nav-link" href="formation.html">Formation</a></li>
+          <li class="nav-item"><a class="nav-link" href="recrutement.html">Recrutement</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Pipeline -->
+  <header class="hero">
+    <div class="container">
+      <span class="hero-tag">Expertise IT et conseil</span>
+      <h1 class="hero-title">Vos projets logiciels, <span class="glow">livrés de bout en bout.</span></h1>
+      <p class="hero-headline">
+        TBC conçoit, développe, teste et déploie vos applications métiers. Une seule équipe sur toute
+        la chaîne, de la spécification à la mise en production.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-tbc">Parler de votre projet</a>
+        <a href="#nos-services" class="btn-ghost">Voir nos prestations</a>
+      </div>
+
+      <p class="pipeline-caption">Notre méthode, en quatre phases</p>
+
+      <div class="pipeline" id="pipeline" role="tablist" aria-label="Étapes de notre méthode">
+        <div class="pipeline-line"><div class="pipeline-fill" id="pipeline-fill"></div></div>
+        <div class="pipeline-nodes">
+          <button class="pipeline-node active" data-index="0" type="button">
+            <span class="node-num">01</span><span class="node-label">Conception</span>
+          </button>
+          <button class="pipeline-node" data-index="1" type="button">
+            <span class="node-num">02</span><span class="node-label">Développement</span>
+          </button>
+          <button class="pipeline-node" data-index="2" type="button">
+            <span class="node-num">03</span><span class="node-label">Tests</span>
+          </button>
+          <button class="pipeline-node" data-index="3" type="button">
+            <span class="node-num">04</span><span class="node-label">Déploiement</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-stage">
+        <div class="hero-stage-text">
+          <div class="stage-watermark" id="stage-watermark">01</div>
+          <p class="stage-copy active" data-index="0">Nous définissons ensemble vos besoins et nous pilotons vos projets, de la spécification au cahier des charges.</p>
+          <p class="stage-copy" data-index="1">Nous mettons à votre disposition notre expertise en JAVA, PHP, JS, HTML5, SQL...</p>
+          <p class="stage-copy" data-index="2">De la recette aux tests d'intrusion, nos équipes sont à votre disposition.</p>
+          <p class="stage-copy" data-index="3">Nous apportons un savoir-faire sur DOCKER, AWS, KUBERNETES.</p>
+        </div>
+        <div class="hero-stage-visual">
+          <div class="visual-frame" id="hero-visual">
+            <span class="frame-corner tl"></span><span class="frame-corner tr"></span>
+            <span class="frame-corner bl"></span><span class="frame-corner br"></span>
+
+            <svg class="hero-illustration active" data-index="0" viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="120" cy="120" r="46" fill="none" stroke="#7fe0d4" stroke-width="2" opacity="0.6"/>
+              <circle cx="270" cy="90" r="30" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.85"/>
+              <circle cx="230" cy="230" r="54" fill="none" stroke="#7fe0d4" stroke-width="2" opacity="0.5"/>
+              <line x1="150" y1="140" x2="245" y2="105" stroke="#7fe0d4" stroke-width="2" stroke-dasharray="6 6"/>
+              <line x1="150" y1="150" x2="215" y2="200" stroke="#7fe0d4" stroke-width="2" stroke-dasharray="6 6"/>
+              <line x1="270" y1="118" x2="250" y2="185" stroke="#7fe0d4" stroke-width="2" stroke-dasharray="6 6"/>
+              <circle cx="120" cy="120" r="6" fill="#ffffff"/>
+              <circle cx="270" cy="90" r="6" fill="#7fe0d4"/>
+              <circle cx="230" cy="230" r="6" fill="#ffffff"/>
+              <path d="M60 300 Q200 250 340 300" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.35"/>
+            </svg>
+
+            <svg class="hero-illustration" data-index="1" viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+              <rect x="70" y="70" width="260" height="180" rx="4" fill="none" stroke="#7fe0d4" stroke-width="2" opacity="0.6"/>
+              <line x1="70" y1="108" x2="330" y2="108" stroke="#7fe0d4" stroke-width="2" opacity="0.6"/>
+              <circle cx="92" cy="89" r="4" fill="#ffffff"/>
+              <circle cx="108" cy="89" r="4" fill="#ffffff" opacity="0.6"/>
+              <circle cx="124" cy="89" r="4" fill="#ffffff" opacity="0.35"/>
+              <path d="M140 145 L110 180 L140 215" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M260 145 L290 180 L260 215" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="215" y1="135" x2="185" y2="225" stroke="#7fe0d4" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+
+            <svg class="hero-illustration" data-index="2" viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+              <rect x="130" y="60" width="140" height="190" rx="4" fill="none" stroke="#7fe0d4" stroke-width="2" opacity="0.6"/>
+              <rect x="170" y="48" width="60" height="20" rx="3" fill="#0a1c30" stroke="#7fe0d4" stroke-width="2"/>
+              <line x1="155" y1="120" x2="245" y2="120" stroke="#ffffff" stroke-width="2" opacity="0.5"/>
+              <line x1="155" y1="145" x2="220" y2="145" stroke="#ffffff" stroke-width="2" opacity="0.35"/>
+              <circle cx="164" cy="185" r="7" fill="none" stroke="#ffffff" stroke-width="2"/>
+              <path d="M160 185 L164 189 L170 180" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="270" cy="215" r="34" fill="none" stroke="#ffffff" stroke-width="3"/>
+              <line x1="294" y1="239" x2="325" y2="270" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+
+            <svg class="hero-illustration" data-index="3" viewBox="0 0 400 360" xmlns="http://www.w3.org/2000/svg">
+              <rect x="120" y="200" width="160" height="34" rx="3" fill="none" stroke="#7fe0d4" stroke-width="2"/>
+              <rect x="120" y="240" width="160" height="34" rx="3" fill="none" stroke="#7fe0d4" stroke-width="2" opacity="0.7"/>
+              <rect x="120" y="280" width="160" height="34" rx="3" fill="none" stroke="#7fe0d4" stroke-width="2" opacity="0.45"/>
+              <circle cx="136" cy="217" r="3" fill="#ffffff"/>
+              <circle cx="136" cy="257" r="3" fill="#ffffff" opacity="0.7"/>
+              <circle cx="136" cy="297" r="3" fill="#ffffff" opacity="0.45"/>
+              <path d="M200 170 L200 90" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+              <path d="M176 118 L200 88 L224 118" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="270" cy="110" r="26" fill="none" stroke="#7fe0d4" stroke-width="2" opacity="0.6"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Chiffres clés -->
+  <section class="metrics">
+    <div class="container">
+      <div class="row g-4 row-cols-2 row-cols-lg-4">
+        <div class="col">
+          <div class="metric">
+            <div class="metric-value"><span data-count="7">0</span></div>
+            <p class="metric-label">grands comptes accompagnés, de l'industrie à l'énergie</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="metric">
+            <div class="metric-value"><span data-count="4">0</span></div>
+            <p class="metric-label">phases du projet couvertes par la même équipe</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="metric">
+            <div class="metric-value"><span data-count="17">0</span></div>
+            <p class="metric-label">technologies et outils maîtrisés en interne</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="metric">
+            <div class="metric-value"><span data-count="1">0</span></div>
+            <p class="metric-label">interlocuteur unique, du cahier des charges à la production</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nos services -->
+  <section class="section" id="nos-services">
+    <div class="container">
+      <div class="section-eyebrow">Prestations</div>
+      <h2 class="section-title">Des prestations adaptées à vos besoins</h2>
+      <p class="section-lead">Conception et spécification des fonctionnalités en adéquation avec les objectifs de vos projets.</p>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <article class="service-tile">
+            <img src="img/service-projets.svg" alt="Planning de projet avec diagramme de Gantt et indicateurs de suivi" width="480" height="300" loading="lazy">
+            <div class="service-tile-body">
+              <h4>Gestion de projets</h4>
+              <p>Pilotage de vos projets de développement de bout en bout.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="service-tile">
+            <img src="img/service-integrations.svg" alt="Applications métiers reliées entre elles par une passerelle d'intégration" width="480" height="300" loading="lazy">
+            <div class="service-tile-body">
+              <h4>Intégrations</h4>
+              <p>Des intégrations de vos applications métiers respectueuses des standards de développement.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="service-tile">
+            <img src="img/service-developpement.svg" alt="Éditeur de code et modules applicatifs développés sur mesure" width="480" height="300" loading="lazy">
+            <div class="service-tile-body">
+              <h4>Développements spécifiques</h4>
+              <p>Des applications et modules fonctionnels adaptés à votre cœur de métier.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="service-tile">
+            <img src="img/service-graphisme.svg" alt="Logo, cartes de visite et palette de couleurs en cours de conception" width="480" height="300" loading="lazy">
+            <div class="service-tile-body">
+              <h4>Conception graphique</h4>
+              <p>Logos, templates web, plaquettes publicitaires, cartes de visite, newsletters.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise (accordion + visuel) -->
+  <section class="section section-alt" id="expertise">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="section-eyebrow">Notre méthode</div>
+          <h2 class="section-title">Notre expertise</h2>
+          <p class="section-lead">Une expertise de bout en bout, de la conception au déploiement.</p>
+        </div>
+      </div>
+      <div class="row g-4 gx-lg-5 align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="expertise-visual" id="expertise-visual">
+            <img src="img/expertise-conception.svg" alt="Cahier des charges, maquette fil de fer et schéma de conception d'un projet" width="480" height="300" class="active">
+            <img src="img/expertise-developpement.svg" alt="Architecture en trois couches : interface, serveur et base de données" width="480" height="300" loading="lazy">
+            <img src="img/expertise-tests.svg" alt="Liste de contrôle de tests avec une anomalie détectée et bouclier de sécurité" width="480" height="300" loading="lazy">
+            <img src="img/expertise-deploiement.svg" alt="Serveurs, cloud et conteneurs orchestrés pour le déploiement" width="480" height="300" loading="lazy">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="accordion accordion-tbc" id="expertiseAccordion">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                  <span class="step-tag">§01</span> Conception
+                </button>
+              </h3>
+              <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#expertiseAccordion">
+                <div class="accordion-body">
+                  Définition de vos besoins et pilotage de vos projets, de la spécification au cahier des charges.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                  <span class="step-tag">§02</span> Développement
+                </button>
+              </h3>
+              <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#expertiseAccordion">
+                <div class="accordion-body">
+                  Programmation et développement conformes aux standards. Création de nouveaux modules fonctionnels.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                  <span class="step-tag">§03</span> Tests
+                </button>
+              </h3>
+              <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#expertiseAccordion">
+                <div class="accordion-body">
+                  Mise en œuvre de vos campagnes de tests allant des tests de recette aux tests d'intrusion.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                  <span class="step-tag">§04</span> Déploiement
+                </button>
+              </h3>
+              <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#expertiseAccordion">
+                <div class="accordion-body">
+                  Déploiement de vos applications sur des infrastructures en adéquation avec vos besoins techniques.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise technologique -->
+  <section class="section">
+    <div class="container">
+      <div class="section-eyebrow">Stack technique</div>
+      <h2 class="section-title">Notre expertise technologique</h2>
+
+      <div class="stack-intro">
+        <p class="section-lead">
+          Vous souhaitez développer de nouvelles fonctionnalités, personnaliser certains éléments, tester vos
+          solutions ou mettre en œuvre l'infrastructure adaptée. Notre expertise sur de nombreuses technologies
+          nous permet de vous proposer la solution idéale.
+        </p>
+        <div class="stack-total">
+          <strong>17</strong>
+          <span>technologies &amp; outils maîtrisés</span>
+        </div>
+      </div>
+
+      <div class="row g-4 row-cols-1 row-cols-sm-2 row-cols-lg-4">
+        <div class="col">
+          <div class="tech-domain">
+            <span class="tech-domain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 4 2 12 8 20"/><polyline points="16 4 22 12 16 20"/><line x1="13.5" y1="3" x2="10.5" y2="21"/></svg>
+            </span>
+            <h3>Développement</h3>
+            <span class="tech-domain-count">4 technologies</span>
+            <div class="tech-domain-pills">
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">PHP</span>
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">HTML5</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="tech-domain">
+            <span class="tech-domain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/></svg>
+            </span>
+            <h3>Base de données</h3>
+            <span class="tech-domain-count">2 technologies</span>
+            <div class="tech-domain-pills">
+              <span class="tech-pill">SQL</span>
+              <span class="tech-pill">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="tech-domain">
+            <span class="tech-domain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9"/><path d="M10 19V5"/><path d="M16 19v-7"/><path d="M22 19V3"/></svg>
+            </span>
+            <h3>Pilotage de projet</h3>
+            <span class="tech-domain-count">3 pratiques</span>
+            <div class="tech-domain-pills">
+              <span class="tech-pill">Roadmap</span>
+              <span class="tech-pill">Spéc. fonctionnelle</span>
+              <span class="tech-pill">Gestion budgétaire</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="tech-domain">
+            <span class="tech-domain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><circle cx="18" cy="12" r="2.6"/><path d="M6 8.6v6.8"/><path d="M8.3 7.2 15.7 10.8"/><path d="M8.3 16.8 15.7 13.2"/></svg>
+            </span>
+            <h3>Outils &amp; méthodes</h3>
+            <span class="tech-domain-count">8 outils</span>
+            <div class="tech-domain-pills">
+              <span class="tech-pill">Méthode Agile</span>
+              <span class="tech-pill">iceScrum</span>
+              <span class="tech-pill">Jira</span>
+              <span class="tech-pill">Mantis</span>
+              <span class="tech-pill">Google Maps</span>
+              <span class="tech-pill">GitLab</span>
+              <span class="tech-pill">Git SVN</span>
+              <span class="tech-pill">Redmine</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="clients-plate">
+        <span class="plate-label">Références clients</span>
+        <h2 class="section-title">Ils nous ont fait confiance</h2>
+        <p class="section-lead mb-4">Nos experts ont cumulé des prestations pour de nombreux groupes industriels.</p>
+        <div class="row row-cols-2 row-cols-md-4 row-cols-lg-7 g-4">
+          <div class="col"><div class="client-logo"><img src="https://www.ms-dconsulting.com/wp-content/uploads/2020/04/cropped-ansm_logo-1.gif" alt="ANSM"></div></div>
+          <div class="col"><div class="client-logo"><img src="https://www.ms-dconsulting.com/wp-content/uploads/2020/04/cropped-engie_logo_blue-1.png" alt="Engie"></div></div>
+          <div class="col"><div class="client-logo"><img src="https://www.ms-dconsulting.com/wp-content/uploads/2020/04/cropped-Virgin_Media.svg_-1.png" alt="Virgin Media"></div></div>
+          <div class="col"><div class="client-logo"><img src="https://www.ms-dconsulting.com/wp-content/uploads/2020/04/cropped-ERDF-1.png" alt="ERDF"></div></div>
+          <div class="col"><div class="client-logo"><img src="https://www.ms-dconsulting.com/wp-content/uploads/2020/04/cropped-RGB_VEOLIA_HD-1.png" alt="Veolia"></div></div>
+          <div class="col"><div class="client-logo"><img src="https://www.ms-dconsulting.com/wp-content/uploads/2020/04/cropped-edf-238x80-1-1.png" alt="EDF"></div></div>
+          <div class="col"><div class="client-logo"><img src="https://www.ms-dconsulting.com/wp-content/uploads/2020/04/cropped-vinci_og_image-1.png" alt="Vinci"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appel à l'action -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <h2>Un projet à cadrer, une équipe à renforcer&nbsp;?</h2>
+            <p class="mb-0">
+              Décrivez-nous votre besoin en quelques lignes. Nous vous proposons un premier cadrage
+              sans engagement.
+            </p>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <a href="#contact" class="btn btn-tbc">Démarrer la discussion</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-eyebrow">Échangeons</div>
+      <h2 class="section-title mb-5">Contactez-nous</h2>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="contact-panel">
+            <div class="contact-panel-header">
+              <span>Formulaire de contact</span>
+              <span>Réponse sous 48 h</span>
+            </div>
+            <div class="contact-panel-body">
+              <form id="contact-form" class="contact-form">
+                <div class="mb-3">
+                  <label class="form-label" for="nom">Nom *</label>
+                  <input type="text" class="form-control" id="nom" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="email">Email *</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="telephone">Téléphone *</label>
+                  <input type="tel" class="form-control" id="telephone" required>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="objet">Objet</label>
+                  <input type="text" class="form-control" id="objet">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="message">Message</label>
+                  <textarea class="form-control" id="message" rows="4"></textarea>
+                </div>
+                <div id="contact-feedback" class="alert d-none"></div>
+                <button type="submit" class="btn btn-tbc">Envoyer</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="map-frame">
+            <iframe src="https://maps.google.com/maps?q=4%20PL%20CLAUDE%20TOURNIER%2077380%20COMBS-LA-VILLE&z=14&t=m&output=embed" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-tbc">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5>TBC</h5>
+          <p>Expertise et conseil en technologie de l'information.</p>
+          <a href="https://www.linkedin.com/in/diadie-sow-97581b8a/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+        <div class="col-md-4">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#nos-services">Nos services</a></li>
+            <li><a href="index.html#expertise">Expertise</a></li>
+            <li><a href="formation.html">Formation</a></li>
+            <li><a href="recrutement.html">Recrutement</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <ul class="footer-links">
+            <li>4 Pl. Claude Tournier, 77380 Combs-la-Ville</li>
+            <li><a href="mailto:contact@it-tbc.com">contact@it-tbc.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex justify-content-between flex-wrap gap-2">
+        <span>© 2026 TBC</span>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="read-progress" aria-hidden="true"></div>
+  <button class="to-top" type="button" aria-label="Revenir en haut de la page">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

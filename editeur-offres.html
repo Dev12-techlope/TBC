@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Éditeur d'offres d'emploi — TBC (outil interne)</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/admin.css" rel="stylesheet">
+</head>
+<body style="background:var(--chalk);">
+
+  <div class="builder-topbar">
+    <div class="container">
+      <div class="brand-line"><span class="dot" aria-hidden="true"></span> Éditeur d'offres d'emploi TBC</div>
+      <a class="back-link" href="recrutement.html">← Retour au recrutement</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="builder-shell">
+
+      <!-- ============== PANNEAU D'ÉDITION ============== -->
+      <div class="builder-panel">
+
+        <p style="font-size:0.86rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          Remplissez les champs ci-dessous. L'aperçu à droite (ou en dessous sur mobile) montre exactement à quoi
+          ressemblera la page de l'offre, formulaire de candidature inclus. Votre brouillon est sauvegardé
+          automatiquement dans ce navigateur.
+        </p>
+
+        <div class="builder-section-title">Informations générales</div>
+
+        <div class="builder-field">
+          <label class="form-label" for="f-titre">Intitulé du poste *</label>
+          <input type="text" class="form-control" id="f-titre" placeholder="Ex. : Développeur Full-Stack PHP / JavaScript">
+        </div>
+
+        <div class="builder-field">
+          <label class="form-label" for="f-type">Type de contrat *</label>
+          <select class="form-control" id="f-type">
+            <option value="temps-plein">Temps plein</option>
+            <option value="freelance">Freelance</option>
+            <option value="stage">Stage</option>
+            <option value="temps-partiel">Temps partiel</option>
+            <option value="saisonnier">Saisonnier</option>
+          </select>
+        </div>
+
+        <div class="builder-field">
+          <label class="form-label" for="f-lieu">Lieu *</label>
+          <input type="text" class="form-control" id="f-lieu" placeholder="Ex. : Combs-la-Ville, France ou Télétravail">
+        </div>
+
+        <div class="builder-field">
+          <label class="form-label" for="f-date">Date de publication</label>
+          <input type="date" class="form-control" id="f-date">
+        </div>
+
+        <div class="builder-field">
+          <label class="form-label">
+            <span>Résumé court *</span>
+            <span class="char-count"><span id="resume-count">0</span>/200</span>
+          </label>
+          <textarea class="form-control" id="f-resume" rows="2" maxlength="200" placeholder="1 phrase qui résume le poste. Affichée sur la carte de la liste des offres."></textarea>
+        </div>
+
+        <div class="builder-field">
+          <label class="form-label" for="f-intro">Phrase d'introduction *</label>
+          <textarea class="form-control" id="f-intro" rows="3" placeholder="Ex. : TBC recherche un·e développeur·se pour rejoindre son équipe technique..."></textarea>
+        </div>
+
+        <div class="builder-section-title">Détail de l'offre</div>
+        <p class="hint" style="margin-top:-0.6rem; margin-bottom:1rem;">
+          Chaque bloc devient un titre suivi d'une liste à puces. Une ligne du texte = une puce.
+        </p>
+
+        <div class="block-list" id="block-list"></div>
+
+        <div class="block-add-row">
+          <button type="button" class="block-add-btn" id="btn-add-section">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 4v16M18 4v16M6 12h12"/></svg>
+            Ajouter une rubrique (ex. Avantages)
+          </button>
+        </div>
+
+        <div class="builder-actions">
+          <button type="button" class="btn-tbc" id="btn-download">1. Télécharger la page de l'offre</button>
+          <button type="button" class="btn-tbc" id="btn-download-list" style="background:var(--panel); box-shadow:none;">2. Télécharger le recrutement.html mis à jour</button>
+          <button type="button" class="btn-ghost" id="btn-new" style="border-color:var(--hair); color:var(--copper); background:var(--chalk);">Nouvelle offre (vider le formulaire)</button>
+          <p class="builder-status" id="builder-status"></p>
+          <p class="hint" style="text-align:center;">
+            Les deux boutons numérotés suffisent à publier : déposez ensuite les deux fichiers téléchargés dans le
+            dossier du site, en remplaçant l'ancien <code>recrutement.html</code>.
+          </p>
+        </div>
+
+        <div class="builder-section-title">Bibliothèque — vos offres enregistrées</div>
+        <p class="hint" style="margin-top:-0.6rem; margin-bottom:1rem;">
+          Chaque téléchargement d'offre l'ajoute ici automatiquement. Le bouton « 2. » régénère recrutement.html à
+          partir de cette liste.
+        </p>
+
+        <label class="hint" style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem; cursor:pointer;">
+          <input type="checkbox" id="chk-examples" checked style="width:16px; height:16px;">
+          Inclure les offres d'exemple d'origine dans recrutement.html
+        </label>
+
+        <div id="library-list"></div>
+
+      </div>
+
+      <!-- ============== APERÇU EN DIRECT ============== -->
+      <div>
+        <div class="builder-preview">
+          <div class="preview-chrome">
+            <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
+            <span class="chrome-url" id="preview-url">emploi-votre-poste.html</span>
+          </div>
+          <iframe id="preview-frame" title="Aperçu de l'offre d'emploi"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/job-editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Éditeur d'articles — TBC (outil interne)</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/admin.css" rel="stylesheet">
+</head>
+<body style="background:var(--chalk);">
+
+  <div class="builder-topbar">
+    <div class="container">
+      <div class="brand-line"><span class="dot" aria-hidden="true"></span> Éditeur d'articles TBC</div>
+      <a class="back-link" href="blog.html">← Retour au blog</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="builder-shell">
+
+      <!-- ============== PANNEAU D'ÉDITION ============== -->
+      <div class="builder-panel">
+
+        <p style="font-size:0.86rem; color:var(--text-muted); margin-bottom:1.5rem;">
+          Remplissez les champs ci-dessous. L'aperçu à droite (ou en dessous sur mobile) se met à jour
+          automatiquement et montre exactement à quoi ressemblera votre article publié. Votre brouillon est
+          sauvegardé automatiquement dans ce navigateur.
+        </p>
+
+        <div class="builder-section-title">Informations générales</div>
+
+        <div class="builder-field">
+          <label class="form-label" for="f-titre">Titre de l'article *</label>
+          <input type="text" class="form-control" id="f-titre" placeholder="Ex. : 5 signes qu'il est temps de migrer vers le cloud">
+        </div>
+
+        <div class="builder-field">
+          <label class="form-label" for="f-date">Date de publication</label>
+          <input type="date" class="form-control" id="f-date">
+        </div>
+
+        <div class="builder-field">
+          <label class="form-label" for="f-resume">
+            <span>Résumé (chapô) *</span>
+            <span class="char-count"><span id="resume-count">0</span>/220</span>
+          </label>
+          <textarea class="form-control" id="f-resume" rows="3" maxlength="220" placeholder="1 à 2 phrases qui donnent envie de lire l'article. Affiché sur la page Blog."></textarea>
+        </div>
+
+        <div class="builder-field">
+          <label class="form-label">Image de couverture</label>
+          <div class="cover-drop" id="cover-drop">
+            <input type="file" id="f-cover" accept="image/*">
+            <div class="cover-drop-label"><strong>Cliquez</strong> ou déposez une image ici (JPG, PNG, WebP)</div>
+          </div>
+          <div class="cover-preview" id="cover-preview"><img id="cover-preview-img" alt=""></div>
+          <button type="button" class="cover-remove" id="cover-remove">Retirer l'image</button>
+          <p class="hint">Utilisée sur la carte du blog et en haut de l'article. Redimensionnée automatiquement.</p>
+        </div>
+
+        <div class="builder-section-title">Contenu de l'article</div>
+
+        <div class="block-list" id="block-list"></div>
+
+        <div class="block-add-row">
+          <button type="button" class="block-add-btn" data-add="paragraph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/></svg>
+            Paragraphe
+          </button>
+          <button type="button" class="block-add-btn" data-add="heading">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 4v16M18 4v16M6 12h12"/></svg>
+            Titre de section
+          </button>
+          <button type="button" class="block-add-btn" data-add="image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.8"/><path d="M4.5 18 9 13l3 3 4-5 3.5 4.5"/></svg>
+            Photo
+          </button>
+          <button type="button" class="block-add-btn" data-add="quote">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h4v6H7c0 2-1 3-3 3v-2c1 0 2-.5 2-2V7z"/><path d="M15 7h4v6h-4c0 2-1 3-3 3v-2c1 0 2-.5 2-2V7z"/></svg>
+            Encadré / citation
+          </button>
+        </div>
+
+        <div class="builder-section-title">Navigation en bas de page</div>
+
+        <div class="builder-field">
+          <label class="form-label" for="f-prev">Lien « Article précédent »</label>
+          <input type="text" class="form-control" id="f-prev" placeholder="blog.html" value="blog.html">
+          <p class="hint">Par défaut vers le blog. Vous pouvez y mettre le nom d'un autre fichier, ex. article-nis2-dora.html</p>
+        </div>
+
+        <div class="builder-field">
+          <label class="form-label" for="f-next">Lien « Article suivant »</label>
+          <input type="text" class="form-control" id="f-next" placeholder="blog.html" value="blog.html">
+        </div>
+
+        <div class="builder-actions">
+          <button type="button" class="btn-tbc" id="btn-download">1. Télécharger la page de l'article</button>
+          <button type="button" class="btn-tbc" id="btn-download-blog" style="background:var(--panel); box-shadow:none;">2. Télécharger le blog.html mis à jour</button>
+          <button type="button" class="btn-ghost" id="btn-new" style="border-color:var(--hair); color:var(--copper); background:var(--chalk);">Nouvel article (vider le formulaire)</button>
+          <p class="builder-status" id="builder-status"></p>
+          <p class="hint" style="text-align:center;">
+            Les deux boutons numérotés suffisent à publier : déposez ensuite les deux fichiers téléchargés dans le
+            dossier du site (à côté des autres pages), en remplaçant l'ancien <code>blog.html</code>.
+          </p>
+        </div>
+
+        <div class="copy-box" id="snippet-box" style="display:none;">
+          <label class="form-label" for="snippet-text">Carte à coller dans blog.html (méthode manuelle)</label>
+          <textarea id="snippet-text" readonly spellcheck="false"></textarea>
+          <button type="button" class="btn-tbc copy-btn" id="btn-copy-snippet">Copier le code</button>
+        </div>
+
+        <div class="builder-section-title">Bibliothèque — vos articles enregistrés</div>
+        <p class="hint" style="margin-top:-0.6rem; margin-bottom:1rem;">
+          Chaque téléchargement d'article l'ajoute ici automatiquement. Le bouton « 2. » régénère blog.html à
+          partir de cette liste.
+        </p>
+
+        <label class="hint" style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem; cursor:pointer;">
+          <input type="checkbox" id="chk-examples" checked style="width:16px; height:16px;">
+          Inclure les 3 articles d'exemple d'origine dans blog.html
+        </label>
+
+        <div id="library-list"></div>
+
+        <button type="button" id="btn-snippet" style="background:none;border:0;padding:0;margin-top:1rem;font-family:'JetBrains Mono',monospace;font-size:0.74rem;color:var(--text-muted);text-decoration:underline;cursor:pointer;">
+          Méthode manuelle : obtenir juste le code d'une carte à coller
+        </button>
+
+      </div>
+
+      <!-- ============== APERÇU EN DIRECT ============== -->
+      <div>
+        <div class="builder-preview">
+          <div class="preview-chrome">
+            <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
+            <span class="chrome-url" id="preview-url">article-votre-titre.html</span>
+          </div>
+          <iframe id="preview-frame" title="Aperçu de l'article"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/article-editor.js"></script>
+</body>
+</html>
