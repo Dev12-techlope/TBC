@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Outils internes de gestion de contenu : pas destinés à être indexés
+Disallow: /editeur-articles.html
+Disallow: /editeur-offres.html
+Disallow: /article-modele.html
+Disallow: /emploi-modele.html
+
+Sitemap: https://it-tbc.com/sitemap.xml

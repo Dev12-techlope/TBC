@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <title>Catalogue de formations 2025–2026 – TBC</title>
-  <meta name="description" content="Catalogue de formations en ligne TBC 2025-2026 : cybersécurité, infrastructures, gestion de projet, méthodes agiles et data. Modalités, tarifs et formules de suivi.">
+  <meta name="description" content="Catalogue de formations en ligne TBC : cybersécurité, infrastructures, gestion de projet, méthodes agiles et data. Modalités, tarifs et formules de suivi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,7 +19,7 @@
   <nav class="navbar navbar-expand-lg navbar-tbc sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="https://it-tbc.com/wp-content/uploads/2025/02/cropped-log_tbc-1-270x270.jpg" alt="TBC">
+        <img src="img/logo-tbc.png" alt="TBC">
         <span class="brand-tag">IT · CONSEIL<br>DÉVELOPPEMENT</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -468,8 +471,8 @@
                       <input type="tel" class="form-control" id="secu-contact" name="contact" placeholder="Téléphone">
                     </div>
                     <div class="col-sm-6">
-                      <label class="form-label" for="secu-participants">Nombre de participants *</label>
-                      <input type="number" min="1" class="form-control" id="secu-participants" name="participants" required>
+                      <label class="form-label" for="secu-participants">Nombre de participants * <span class="field-hint">(50 minimum)</span></label>
+                      <input type="number" min="50" step="1" placeholder="50" class="form-control" id="secu-participants" name="participants" required data-min-message="Cette formation est vendue en pack à partir de 50 participants : indiquez 50 ou plus.">
                     </div>
                     <div class="col-12">
                       <label class="form-label" for="secu-note">Note</label>
@@ -580,8 +583,8 @@
                       <input type="tel" class="form-control" id="infra-contact" name="contact" placeholder="Téléphone">
                     </div>
                     <div class="col-sm-6">
-                      <label class="form-label" for="infra-participants">Nombre de participants *</label>
-                      <input type="number" min="1" class="form-control" id="infra-participants" name="participants" required>
+                      <label class="form-label" for="infra-participants">Nombre de participants * <span class="field-hint">(10 minimum)</span></label>
+                      <input type="number" min="10" step="1" placeholder="10" class="form-control" id="infra-participants" name="participants" required data-min-message="Cette formation nécessite au minimum 10 participants : indiquez 10 ou plus.">
                     </div>
                     <div class="col-12">
                       <label class="form-label" for="infra-note">Note</label>
@@ -682,8 +685,8 @@
                       <input type="tel" class="form-control" id="gestion-contact" name="contact" placeholder="Téléphone">
                     </div>
                     <div class="col-sm-6">
-                      <label class="form-label" for="gestion-participants">Nombre de participants *</label>
-                      <input type="number" min="1" class="form-control" id="gestion-participants" name="participants" required>
+                      <label class="form-label" for="gestion-participants">Nombre de participants * <span class="field-hint">(10 minimum)</span></label>
+                      <input type="number" min="10" step="1" placeholder="10" class="form-control" id="gestion-participants" name="participants" required data-min-message="Cette formation nécessite au minimum 10 participants : indiquez 10 ou plus.">
                     </div>
                     <div class="col-12">
                       <label class="form-label" for="gestion-note">Note</label>
@@ -804,8 +807,8 @@
                       <input type="tel" class="form-control" id="meth-contact" name="contact" placeholder="Téléphone">
                     </div>
                     <div class="col-sm-6">
-                      <label class="form-label" for="meth-participants">Nombre de participants *</label>
-                      <input type="number" min="1" class="form-control" id="meth-participants" name="participants" required>
+                      <label class="form-label" for="meth-participants">Nombre de participants * <span class="field-hint">(10 minimum)</span></label>
+                      <input type="number" min="10" step="1" placeholder="10" class="form-control" id="meth-participants" name="participants" required data-min-message="Cette formation nécessite au minimum 10 participants : indiquez 10 ou plus.">
                     </div>
                     <div class="col-12">
                       <label class="form-label" for="meth-note">Note</label>
@@ -916,8 +919,8 @@
                       <input type="tel" class="form-control" id="data-contact" name="contact" placeholder="Téléphone">
                     </div>
                     <div class="col-sm-6">
-                      <label class="form-label" for="data-participants">Nombre de participants *</label>
-                      <input type="number" min="1" class="form-control" id="data-participants" name="participants" required>
+                      <label class="form-label" for="data-participants">Nombre de participants * <span class="field-hint">(10 minimum)</span></label>
+                      <input type="number" min="10" step="1" placeholder="10" class="form-control" id="data-participants" name="participants" required data-min-message="Cette formation nécessite au minimum 10 participants : indiquez 10 ou plus.">
                     </div>
                     <div class="col-12">
                       <label class="form-label" for="data-note">Note</label>
@@ -1230,7 +1233,7 @@
         <div class="col-md-4">
           <h5>Contact</h5>
           <ul class="footer-links">
-            <li>4 Pl. Claude Tournier, 77380 Combs-la-Ville</li>
+            <li>168 allée des mésanges, 77190, Dammarie-les-lys (France)</li>
             <li><a href="mailto:contact@it-tbc.com">contact@it-tbc.com</a></li>
             <li>Plateformes : Google Meet · Microsoft Teams · BigBlueButton</li>
           </ul>
@@ -1238,7 +1241,10 @@
       </div>
       <div class="footer-bottom d-flex justify-content-between flex-wrap gap-2">
         <span>© 2026 TBC</span>
-        <a href="mentions-legales.html">Mentions légales</a>
+        <div class="d-flex gap-3">
+          <a href="politique-confidentialite.html">Politique de confidentialité</a>
+          <a href="mentions-legales.html">Mentions légales</a>
+        </div>
       </div>
     </div>
   </footer>
